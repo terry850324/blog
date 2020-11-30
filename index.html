@@ -169,9 +169,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
-              
 
-              <time title="創建時間：2020-11-16 22:31:13 / 修改時間：22:52:59" itemprop="dateCreated datePublished" datetime="2020-11-16T22:31:13+08:00">2020-11-16</time>
+              <time title="創建時間：2020-11-16 22:31:00" itemprop="dateCreated datePublished" datetime="2020-11-16T22:31:00+08:00">2020-11-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-11-30 20:37:39" itemprop="dateModified" datetime="2020-11-30T20:37:39+08:00">2020-11-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/%E5%B7%A5%E4%BD%9C%E7%AD%86%E8%A8%98/" itemprop="url" rel="index"><span itemprop="name">工作筆記</span></a>
+                </span>
             </span>
 
           
@@ -185,41 +200,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="0"><a href="#0" class="headerlink" title="0"></a>0</h2><h3 id="引用參考"><a href="#引用參考" class="headerlink" title="引用參考"></a>引用參考</h3><pre><code>Imports System.Net.Mail &#39;SMTP主要類別
-Imports System.Net      &#39;帳號驗證       </code></pre>
-<h3 id="SMTP-Function"><a href="#SMTP-Function" class="headerlink" title="SMTP Function"></a>SMTP Function</h3><pre><code>Public Sub SendMail(ByVal str_MailAct As String, ByVal str_MailPwd As String,
-                    ByVal strlst_MailToAddress As List(Of String),
-                    ByVal str_Subject As String, ByVal str_MailBody As String)</code></pre>
-<h3 id="必要物件"><a href="#必要物件" class="headerlink" title="必要物件"></a>必要物件</h3><pre><code>Dim obj_SmtpClient As New SmtpClient
-Dim obj_SmtpMessage As New MailMessage</code></pre>
-<h4 id="213"><a href="#213" class="headerlink" title="213"></a>213</h4><pre><code>    Dim obj_SmtpClient As New SmtpClient
-    Dim obj_SmtpMessage As New MailMessage
-
-    Try
-
-        &#39; Mail content
-        obj_SmtpMessage.From = New MailAddress(str_MailAct)
-        For Each str_MailAddress As String In strlst_MailToAddress
-            obj_SmtpMessage.To.Add(str_MailAddress)
-        Next
-        obj_SmtpMessage.Subject = str_Subject
-        obj_SmtpMessage.IsBodyHtml = True
-        obj_SmtpMessage.Body = str_MailBody
-
-        &#39; SMTP setting
-        obj_SmtpClient.Host = &quot;CAS.sigurd.com.tw&quot;
-        obj_SmtpClient.Port = &quot;25&quot;
-        obj_SmtpClient.Credentials = New NetworkCredential(str_MailAct, str_MailPwd)
-
-        &#39; Send mail
-        obj_SmtpClient.Send(obj_SmtpMessage)
-
-    Catch ex As Exception
-        ConsoleWriteLine(&quot;Sending mail failed!&quot; &amp; vbNewLine &amp; ex.ToString, ConsoleColor.Red)
-    End Try
-
-End Sub</code></pre>
-
+          <p>透過System.Net.Mail.SmtpClient類別寄送Mail。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2020/11/16/VB-NET-SMTP%E5%AF%84%E9%80%81Mail/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -536,11 +525,11 @@ End Sub</code></pre>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分類</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">標籤</span>
       </div>
   </nav>
